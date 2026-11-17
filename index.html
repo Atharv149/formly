@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Formly — Objects Made Extraordinary</title>
+
+  <meta name="description"
+    content="Discover beautifully designed CAD files, 3D models and personalized 3D printed creations.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+
+      <a href="#/home" class="logo">
+        formly<span>.</span>
+      </a>
+
+      <nav class="nav" id="nav">
+        <a href="#/login" id="authLink">Login</a>
+        <a href="#/admin" id="adminLink" hidden>Admin</a>
+        <a href="#/home">Home</a>
+        <a href="#/gifts" data-link="gifts">Gifts</a>
+        <a href="#/models" data-link="models">Collections</a>
+        <a href="#/custom" data-link="custom">Custom Design</a>
+        <a href="#/cart" data-link="cart" class="cart-link">
+          Bag <span class="cart-count" id="cartCount">0</span>
+        </a>
+      </nav>
+
+      <button class="burger" id="burger"
+        aria-label="Toggle navigation"
+        aria-expanded="false">
+        <span></span>
+        <span></span>
+      </button>
+
+    </div>
+  </header>
+
+
+  <main id="app">
+
+    <!-- HOME PAGE -->
+    <section class="view" data-view="home">
+
+      <!-- HERO -->
+      <section class="hero-section">
+
+        <div class="container hero">
+
+          <div class="hero-copy">
+
+            <span class="eyebrow">
+              DESIGN YOUR EVERYDAY
+            </span>
+
+            <h1>
+              Ideas take<br>
+              <span>shape here.</span>
+            </h1>
+
+            <p class="hero-sub">
+              Thoughtful designs. Beautiful objects.
+              Endless possibilities.
+            </p>
+
+            <p class="muted">
+              Explore unique 3D models, functional objects
+              and personalized creations made for modern living.
+            </p>
+
+            <div class="btn-row">
+              <a href="#/models" class="btn btn-primary">
+                Explore Collection
+              </a>
+
+              <a href="#/custom" class="btn btn-ghost">
+                Create Your Own
+              </a>
+            </div>
+
+            <div class="hero-note">
+              <span>✦</span>
+              Designed with creativity. Made for you.
+            </div>
+
+          </div>
+
+          <div class="hero-art" id="heroArt">
+            <img src="images/hero.jpg"
+              alt="Beautiful 3D printed designer objects">
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- TRUST STRIP -->
+      <section class="strip">
+        <div class="container strip-inner">
+
+          <span>✦ Unique 3D Designs</span>
+          <span>✦ Affordable Collections</span>
+          <span>✦ Custom Creations</span>
+          <span>✦ Digital CAD Files</span>
+
+        </div>
+      </section>
+
+
+      <!-- CATEGORIES -->
+      <section class="container section">
+
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">EXPLORE WHAT'S POSSIBLE</p>
+            <h2>Find your kind of design.</h2>
+          </div>
+        </div>
+
+        <div class="cat-grid" id="catGrid"></div>
+
+      </section>
+
+
+      <!-- FEATURED PRODUCTS -->
+      <section class="featured-section">
+
+        <div class="container section">
+
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">CURATED FOR YOU</p>
+              <h2>Objects worth discovering.</h2>
+              <p class="muted">
+                Functional, beautiful and a little unexpected.
+              </p>
+            </div>
+
+            <a href="#/models" class="link-arrow">
+              View all models →
+            </a>
+          </div>
+
+          <div class="grid" id="featuredGrid"></div>
+
+        </div>
+
+      </section>
+
+
+      <!-- GIFT COLLECTION -->
+      <section class="gift-band">
+
+        <div class="container gift-inner">
+
+          <div class="gift-copy">
+
+            <p class="eyebrow">GIVE SOMETHING DIFFERENT</p>
+
+            <h2>
+              Small gifts.<br>
+              Big smiles.
+            </h2>
+
+            <p class="muted">
+              Make birthdays, celebrations and special moments
+              more meaningful with creative 3D-printed gifts.
+            </p>
+
+            <a href="#/gifts" class="btn btn-primary">
+              Discover Gifts →
+            </a>
+
+          </div>
+
+          <div class="grid grid-sm" id="giftPreview"></div>
+
+        </div>
+
+      </section>
+
+
+      <!-- CUSTOM DESIGN BANNER -->
+      <section class="container section">
+
+        <div class="custom-banner">
+
+          <div class="custom-banner-content">
+
+            <p class="eyebrow">MADE FROM YOUR IMAGINATION</p>
+
+            <h2>
+              Have an idea?<br>
+              Let's give it shape.
+            </h2>
+
+            <p>
+              From engineering components to personalized gifts,
+              bring your imagination to life.
+            </p>
+
+            <a href="#/custom" class="btn btn-light">
+              Start a Custom Project →
+            </a>
+
+          </div>
+
+          <div class="custom-banner-art">
+            <img src="images/custom-design.jpg"
+              alt="Creative 3D printed custom design">
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- FINAL CTA -->
+      <section class="container section cta">
+
+        <p class="eyebrow">THE WORLD OF FORMLY</p>
+
+        <h2>
+          Make room for<br>
+          better ideas.
+        </h2>
+
+        <p class="muted">
+          Discover something new for your next project.
+        </p>
+
+        <a href="#/models" class="btn btn-primary">
+          Explore All Designs
+        </a>
+
+      </section>
+
+    </section>
+
+
+    <!-- MODELS PAGE -->
+    <section class="view" data-view="models">
+
+      <div class="container section">
+
+        <p class="eyebrow">THE COMPLETE COLLECTION</p>
+
+        <h1 class="page-title">Explore Designs.</h1>
+
+        <p class="muted lead">
+          Find the perfect design for your next creation.
+        </p>
+
+        <div class="toolbar">
+
+          <input type="search"
+            id="search"
+            placeholder="Search designs..."
+            aria-label="Search designs">
+
+          <select id="sort" aria-label="Sort products">
+            <option value="featured">Featured</option>
+            <option value="low">Price: Low to High</option>
+            <option value="high">Price: High to Low</option>
+            <option value="rating">Top Rated</option>
+          </select>
+
+        </div>
+
+        <div class="chips" id="chips"></div>
+
+        <div class="grid" id="modelsGrid"></div>
+
+        <p class="empty" id="modelsEmpty" hidden>
+          No designs match your search.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- GIFTS PAGE -->
+    <section class="view" data-view="gifts">
+
+      <div class="container section">
+
+        <p class="eyebrow">MADE TO MAKE SOMEONE SMILE</p>
+
+        <h1 class="page-title">Thoughtful Gifts.</h1>
+
+        <p class="muted lead">
+          Discover creative objects for the people who matter.
+        </p>
+
+        <div class="grid" id="giftsGrid"></div>
+
+      </div>
+
+    </section>
+
+
+    <!-- CUSTOM DESIGN PAGE -->
+    <section class="view" data-view="custom">
+
+      <div class="container section narrow">
+
+        <p class="eyebrow">YOUR IDEA, OUR DESIGN</p>
+
+        <h1 class="page-title">
+          Let's create something unique.
+        </h1>
+
+        <p class="muted lead">
+          Tell us about your idea. We will help turn it
+          into a digital design.
+        </p>
+
+        <form id="customForm" class="form" novalidate>
+
+          <div class="row">
+
+            <label>
+              Your Name
+              <input name="name" required
+                placeholder="Enter your name">
+            </label>
+
+            <label>
+              Email Address
+              <input name="email" type="email" required
+                placeholder="you@email.com">
+            </label>
+
+          </div>
+
+          <div class="row">
+
+            <label>
+              Project Type
+              <select name="type">
+                <option>Engineering Part</option>
+                <option>Personalized Gift</option>
+                <option>Home Decor</option>
+                <option>Kitchen Item</option>
+                <option>Something Else</option>
+              </select>
+            </label>
+
+            <label>
+              Budget
+              <select name="budget">
+                <option>Under ₹500</option>
+                <option>₹500 – ₹1,500</option>
+                <option>₹1,500 – ₹5,000</option>
+                <option>Not Sure Yet</option>
+              </select>
+            </label>
+
+          </div>
+
+          <label>
+            Describe Your Idea
+            <textarea name="message" rows="5"
+              required
+              placeholder="Describe your design, size, purpose and requirements..."></textarea>
+          </label>
+
+          <p class="form-error" id="formError" hidden></p>
+
+          <button type="submit" class="btn btn-primary">
+            Submit Design Request →
+          </button>
+
+        </form>
+
+        <div class="success" id="formSuccess" hidden>
+
+          <h3>Thank you! Request received.</h3>
+
+          <p class="muted">
+            We appreciate your interest.
+          </p>
+
+          <a href="#/models" class="btn btn-ghost">
+            Explore Models
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- CART PAGE -->
+    <section class="view" data-view="cart">
+
+      <div class="container section narrow">
+
+        <p class="eyebrow">YOUR SELECTED DESIGNS</p>
+
+        <h1 class="page-title">Your Bag.</h1>
+
+        <div id="cartList"></div>
+
+        <div class="cart-summary" id="cartSummary" hidden>
+
+          <div>
+            <span>Total</span>
+            <strong id="cartTotal">₹0</strong>
+          </div>
+
+          <button class="btn btn-primary" id="checkoutBtn">
+            Continue to Checkout
+          </button>
+
+          <button class="btn btn-ghost" id="clearBtn">
+            Clear Bag
+          </button>
+
+        </div>
+
+        <p class="empty" id="cartEmpty">
+          Your bag is currently empty.
+          <a href="#/models">Explore designs →</a>
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- LOGIN / SIGNUP -->
+    <section class="view" data-view="login">
+      <div class="container section narrow">
+        <p class="eyebrow">WELCOME</p>
+        <h1 class="page-title" id="authTitle">Log in.</h1>
+
+        <form id="authForm" class="form" novalidate>
+          <label id="nameWrap" hidden>Your Name
+            <input name="name" placeholder="Enter your name">
+          </label>
+          <label>Email Address
+            <input name="email" type="email" required placeholder="you@email.com">
+          </label>
+          <label>Password
+            <input name="password" type="password" minlength="6" required placeholder="At least 6 characters">
+          </label>
+          <p class="form-error" id="authError" hidden></p>
+          <button type="submit" class="btn btn-primary" id="authSubmit">Log in →</button>
+        </form>
+
+        <p class="muted" style="margin-top:18px">
+          <span id="authSwitchText">New to Formly?</span>
+          <a href="#" id="authSwitch" class="link-arrow">Create an account</a>
+        </p>
+      </div>
+    </section>
+
+
+    <!-- CHECKOUT -->
+    <section class="view" data-view="checkout">
+      <div class="container section narrow">
+        <p class="eyebrow">ALMOST THERE</p>
+        <h1 class="page-title">Checkout.</h1>
+
+        <div id="orderSummary"></div>
+
+        <form id="checkoutForm" class="form" style="margin-top:24px" novalidate>
+          <div class="row">
+            <label>Full Name <input name="name" required></label>
+            <label>Phone <input name="phone" type="tel" required pattern="[0-9]{10}" placeholder="10-digit mobile number"></label>
+          </div>
+          <label>Delivery Address
+            <textarea name="address" rows="3" required placeholder="House no., street, area, landmark"></textarea>
+          </label>
+          <div class="row">
+            <label>City <input name="city" required></label>
+            <label>State <input name="state" required></label>
+          </div>
+          <div class="row">
+            <label>PIN Code <input name="pin" required pattern="[0-9]{6}" placeholder="6 digits"></label>
+            <label>Payment
+              <select name="payment">
+                <option>Cash on Delivery</option>
+                <option>UPI (after confirmation)</option>
+              </select>
+            </label>
+          </div>
+          <button type="submit" class="btn btn-primary">Place Order →</button>
+        </form>
+
+        <div class="success" id="orderSuccess" hidden>
+          <h3>Order placed! 🎉</h3>
+          <p>Your order number is <strong id="orderId"></strong>. We'll contact you to confirm delivery.</p>
+          <a href="#/models" class="btn btn-ghost" style="margin-top:14px">Keep exploring</a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ADMIN -->
+    <section class="view" data-view="admin">
+      <div class="container section">
+        <p class="eyebrow">ADMIN</p>
+        <h1 class="page-title">Dashboard.</h1>
+
+        <h3>Add a product</h3>
+        <form id="productForm" class="form narrow" style="margin:16px 0 50px" novalidate>
+          <div class="row">
+            <label>Name <input name="name" required></label>
+            <label>Price (₹) <input name="price" type="number" min="1" required></label>
+          </div>
+          <div class="row">
+            <label>Category <select name="cat" id="pCat"></select></label>
+            <label>File formats <input name="formats" placeholder="STL, OBJ, STEP"></label>
+          </div>
+          <label>Description <textarea name="description" rows="3" required></textarea></label>
+          <label>Image <input name="image" type="file" accept="image/*"></label>
+          <label style="display:flex;align-items:center;gap:8px">
+            <input name="gift" type="checkbox" style="width:auto"> Show in Gifts
+          </label>
+          <button type="submit" class="btn btn-primary">Add Product</button>
+        </form>
+
+        <h3>Products</h3>
+        <div id="adminProducts" style="margin:12px 0 50px"></div>
+
+        <h3>Orders</h3>
+        <div id="adminOrders" style="margin:12px 0 50px"></div>
+
+        <h3>Custom Design Requests</h3>
+        <div id="adminRequests" style="margin-top:12px"></div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- PRODUCT DETAILS MODAL -->
+  <div class="modal" id="modal" hidden>
+
+    <div class="modal-backdrop" data-close></div>
+
+    <div class="modal-card"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="mTitle">
+
+      <button class="modal-close"
+        data-close
+        aria-label="Close">
+        ×
+      </button>
+
+      <div class="modal-art" id="mArt"></div>
+
+      <div class="modal-body">
+
+        <p class="eyebrow" id="mCat"></p>
+
+        <h3 id="mTitle"></h3>
+
+        <p class="rating" id="mRating"></p>
+
+        <p class="muted" id="mDesc"></p>
+
+        <p class="formats" id="mFormats"></p>
+
+        <div class="modal-buy">
+
+          <strong class="price" id="mPrice"></strong>
+
+          <button class="btn btn-primary" id="mAdd">
+            Add to Bag
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- TOAST -->
+  <div class="toast"
+    id="toast"
+    role="status"
+    aria-live="polite">
+  </div>
+
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+
+    <div class="container footer-inner">
+
+      <div class="footer-brand">
+
+        <a href="#/home" class="logo">
+          formly<span>.</span>
+        </a>
+
+        <p class="muted">
+          Turning imagination into objects.
+        </p>
+
+      </div>
+
+      <div class="footer-links">
+
+        <a href="#/models">Collections</a>
+        <a href="#/gifts">Gifts</a>
+        <a href="#/custom">Custom Design</a>
+
+      </div>
+
+      <p class="footer-copy muted">
+        © 2026 Formly. All rights reserved.
+      </p>
+
+    </div>
+
+  </footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="supabase-config.js"></script>
+  <script src="script.js"></script>
+  <script src="extras.js"></script>
+</body>
+</html>

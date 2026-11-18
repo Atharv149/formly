@@ -413,6 +413,10 @@ function renderCart() {
     0
   );
 
+  if ($("cartCountMobile")) {
+    $("cartCountMobile").textContent = count;
+  }
+
   if ($("cartCount")) {
     $("cartCount").textContent = count;
   }
@@ -549,6 +553,13 @@ $("burger")?.addEventListener("click", () => {
   const isOpen = nav.classList.toggle("open");
 
   burger.setAttribute("aria-expanded", isOpen);
+});
+
+// Close the mobile menu after tapping any link (even the current page)
+$("nav")?.addEventListener("click", event => {
+  if (!event.target.closest("a")) return;
+  $("nav").classList.remove("open");
+  $("burger")?.setAttribute("aria-expanded", "false");
 });
 
 /* ---------- CATEGORY SELECTION ---------- */

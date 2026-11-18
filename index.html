@@ -41,12 +41,20 @@
         </a>
       </nav>
 
-      <button class="burger" id="burger"
-        aria-label="Toggle navigation"
-        aria-expanded="false">
-        <span></span>
-        <span></span>
-      </button>
+      <div class="header-actions">
+        <a href="#/cart" class="mobile-cart" aria-label="Open bag">
+          Bag <span class="cart-count" id="cartCountMobile">0</span>
+        </a>
+
+        <button class="burger" id="burger"
+          aria-label="Toggle navigation"
+          aria-controls="nav"
+          aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
 
     </div>
   </header>
